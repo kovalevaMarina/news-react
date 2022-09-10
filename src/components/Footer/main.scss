@@ -1,0 +1,21 @@
+@import "../../styles/all.scss";
+
+.footer {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $macaroni-and-cheese;
+
+  &-social {
+    display: flex;
+    &__item {
+      margin-right: 15px;
+      padding: 5px;
+      border-radius: 10px;
+      background-color: $white;
+      &--icon {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

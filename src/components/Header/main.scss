@@ -1,57 +1,31 @@
 @import "../../styles/all.scss";
-
 .header {
-  color: $white;
-  background-color: $shakespeare;
+  padding: 20px;
+  border-bottom: 4px solid $deep-cerulean;
   &-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 0;
   }
+}
 
-  &-left {
-    display: flex;
+.logo {
+  &-link {
+    font-size: 45px;
+    font-weight: 700;
+    color: $fuscous-gray;
+    cursor: pointer;
   }
 }
 
 .menu-list {
-  display: flex;
-  align-items: center;
   &__item {
-    position: relative;
-    padding: 0 20px;
-    & + &::before {
-      content: "";
-      width: 1px;
-      height: 16px;
-      display: block;
-      position: absolute;
-      background-color: $white;
-      left: 0;
-      top: calc(50% - 6px);
+    font-size: 20px;
+    margin-left: 20px;
+    color: $fuscous-gray;
+    transition: .3s ease;
+    &:hover {
+      color: $macaroni-and-cheese;
     }
   }
-
-  &__link {
-    font-size: 13px;
-    color: $white;
-  }
-}
-
-.label {
-  font-size: 13px;
-  margin-right: 5px;
-}
-
-.select {
-  font-size: 13px;
-  font-weight: 700;
-  color: $white;
-  background-color: $shakespeare;
-  border: none;
-}
-
-.language-select {
-  margin-right: 20px;
 }

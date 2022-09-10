@@ -1,19 +1,9 @@
 *,html,body{
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 .container {
@@ -22,27 +12,14 @@ a {
   margin: 0 auto;
 }
 
-.txt {
-  &--uppercase {
-    text-transform: uppercase;
-  }
-}
-
-.title-h2 {
-  font-size: 27px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.title-h4 {
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
 .active {
-  color: $pelorous;
+  color: $maroon-flush;
 }
+
+.txt--blue {
+  color: $deep-cerulean;
+}
+
 
 
 

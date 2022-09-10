@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 
-const ContextProducts = React.createContext();
-const ContextBasket = React.createContext();
+// const ContextProducts = React.createContext();
+// const ContextBasket = React.createContext();
 
-export { ContextProducts, ContextBasket };
+// export { ContextProducts, ContextBasket };

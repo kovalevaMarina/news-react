@@ -1,56 +1,34 @@
 import './main.scss';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
-  const headerSelect = [
-    {
-      label: 'Language:',
-      id: 'languages',
-      option: 'English',
-      class: 'language-select select',
-    },
-    {
-      label: 'Currency:',
-      id: 'currencies',
-      option: 'USD',
-      class: 'currency-select select',
-    },
-  ];
-
-  const arrMenu = ['Account', 'Wishlist', 'Checkout', 'Log In', 'Sign Up'];
-
   return (
     <header className="header">
       <div className="container">
         <div className="header-wrap">
-          <div className="header-left">
-            {headerSelect.map((item) => {
-              return (
-                <div key={item.id} className={item.id}>
-                  <label className="label" htmlFor={item.id}>
-                    {item.label}
-                  </label>
-                  <select className={item.class} id={item.id}>
-                    <option value={item.option}>{item.option}</option>
-                  </select>
-                </div>
-              );
-            })}
+          <div className="logo">
+            <a className="logo-link">
+              in<span className="logo-link__dot txt--blue">.</span>news
+            </a>
           </div>
-          <div className="header-right">
-            <nav className="nav">
-              <ul className="menu-list">
-                {arrMenu.map((elem) => {
-                  return (
-                    <li key={elem} className="menu-list__item">
-                      <a className="menu-list__link" href="#">
-                        {elem}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </nav>
-          </div>
+          <nav>
+            <ul className="menu-list">
+              <NavLink
+                activeclassname="active"
+                className="menu-list__item"
+                to={'/news'}
+              >
+                News
+              </NavLink>
+              <NavLink
+                activeclassname="active"
+                className="menu-list__item"
+                to={'/login'}
+              >
+                Log In
+              </NavLink>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>

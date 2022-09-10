@@ -1,23 +1,22 @@
 import './main.scss';
-import PromoRoute from './PromoRoute';
-import promo_bg from '../../assets/img/promo_bg.jpg';
+import promo_bg from '../../assets/img/traveling.svg';
 
 function Promo() {
   return (
-    <section
-      className="promo"
-      style={{
-        backgroundImage: `url(${promo_bg})`,
-        height: '650px',
-        backgroundPosition: 'top center',
-        backgroundSize: 'cover',
-      }}
-    >
+    <section className="promo">
       <div className="container">
-        <PromoRoute />
-        <div className="promo-middle">
-          <h1 className="promo-title title-h1">Aluminub club</h1>
-          <h2 className="promo-title title-h2">Experience ray-ban</h2>
+        <div className="promo-wrap">
+          <div className="promo-info">
+            <h1 className="title-h1">
+              Travel <span className="txt--blue">news</span>
+            </h1>
+            <h3 className="title-h3">
+              Read and stay up to date with the latest travel news
+            </h3>
+          </div>
+          <div className="promo-img">
+            <img src={promo_bg} />
+          </div>
         </div>
       </div>
     </section>
