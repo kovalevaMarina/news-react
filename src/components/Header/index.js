@@ -1,5 +1,5 @@
 import './main.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -7,9 +7,9 @@ function Header() {
       <div className="container">
         <div className="header-wrap">
           <div className="logo">
-            <a className="logo-link">
+            <Link className="logo-link" to={'/'}>
               in<span className="logo-link__dot txt--blue">.</span>news
-            </a>
+            </Link>
           </div>
           <nav>
             <ul className="menu-list">
