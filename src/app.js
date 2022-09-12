@@ -1,6 +1,6 @@
 import './style.scss';
 import React, { useEffect } from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Layout from './components/Layout';
 import Home from './views/Home';
@@ -21,7 +21,7 @@ const App = () => {
     }
   });
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -31,7 +31,7 @@ const App = () => {
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
