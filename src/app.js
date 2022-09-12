@@ -7,6 +7,7 @@ import Home from './views/Home';
 import NewsPage from './views/News';
 import LoginPage from './views/Login';
 import ProfilePage from './views/Profile';
+import ErrorPage from './views/Error';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ const App = () => {
           <Route path="news" element={<NewsPage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="profile" element={<ProfilePage />} />
-          {/* <Route path="*" element={<ErrorPage />} /> */}
+          <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
