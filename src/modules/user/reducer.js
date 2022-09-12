@@ -1,16 +1,24 @@
-import { ADD_USERNAME, ADD_PASSWORD } from './type';
+import { LOGIN, USER_INFO } from './type';
 
 const defaultState = {
-  username: '',
-  password: '',
+  login: null,
+  info: {
+    login: 'Admin',
+    password: '12345',
+    username: 'Marina Kovaleva',
+    timeSince: 'With us since 2021',
+    location: 'Lives in Dnipro, Ukraine',
+    language: 'English , Русский , Українська',
+    followers: 25,
+  },
 };
 
 const reducerUser = (state = defaultState, action) => {
   switch (action.type) {
-    case ADD_USERNAME:
-      return { ...state, username: action.payload };
-    case ADD_PASSWORD:
-      return { ...state, password: action.payload };
+    case LOGIN:
+      return { ...state, login: action.payload };
+    case USER_INFO:
+      return { ...state, info: action.payload };
     default:
       return state;
   }

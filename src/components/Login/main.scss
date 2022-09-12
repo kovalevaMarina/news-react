@@ -1,0 +1,57 @@
+@import "../../styles/all.scss";
+
+.login {
+  &-wrap {
+    padding: 30px 0;
+  }
+  &-form {
+    width: 400px;
+    margin: 0 auto;
+    height:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    &__title {
+      font-size: 35px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    &__input {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid $mine-shaft;
+      border-radius: 5px;
+      outline: none;
+      &:focus,
+      &:active {
+        border-color: $deep-cerulean;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      font-size: 20px;
+      padding: 10px 5px;
+      color: $white;
+      background-color: $deep-cerulean;
+      border: none;
+      border-radius: 5px;
+      text-transform: uppercase;
+      transition: .3s ease;
+      cursor: pointer;
+      &:hover {
+        background-color: $faded-jade;
+      }
+    }
+  }
+}
+
+.form-error {
+  font-size: 13px;
+  margin: 8px 0;
+  color: $maroon-flush;
+}
+

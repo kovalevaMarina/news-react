@@ -3,7 +3,7 @@ import { reducerUser } from '../modules/user/reducer';
 import { reducerNews } from '../modules/news/reducer';
 
 const allReducer = combineReducers({
-  users: reducerUser,
+  currentUser: reducerUser,
   news: reducerNews,
 });
 

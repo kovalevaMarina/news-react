@@ -1,7 +1,9 @@
 import './main.scss';
 import { NavLink, Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function Header() {
+  const currentUser = useSelector((state) => state.currentUser.login);
   return (
     <header className="header">
       <div className="container">
@@ -20,13 +22,23 @@ function Header() {
               >
                 News
               </NavLink>
-              <NavLink
-                activeclassname="active"
-                className="menu-list__item"
-                to={'/login'}
-              >
-                Log In
-              </NavLink>
+              {currentUser ? (
+                <NavLink
+                  activeclassname="active"
+                  className="menu-list__item"
+                  to={'/profile'}
+                >
+                  Profile
+                </NavLink>
+              ) : (
+                <NavLink
+                  activeclassname="active"
+                  className="menu-list__item"
+                  to={'/login'}
+                >
+                  Log In
+                </NavLink>
+              )}
             </ul>
           </nav>
         </div>
